@@ -4,7 +4,7 @@
 
 <footer>
 	<p>
-		&copy {new Date().getFullYear()}. Made with ❤ by {config.title} |
+		&copy {new Date().getFullYear()}. Made with ❤ by {config.name} |
 		<a href="https://codeberg.org/puppy/personal-website" target="_blank" rel="noopener noreferrer"
 			>source code</a>
 	</p>
