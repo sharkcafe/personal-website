@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 
 import { escapeSvelte, mdsvex } from 'mdsvex';
 import shiki from 'shiki';

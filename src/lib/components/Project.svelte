@@ -28,6 +28,12 @@
 		border: var(--border-size-2) solid var(--surface-4);
 		margin-block: inherit;
 		margin-inline: inherit;
+		transition: 0.2s all;
+		animation: var(--animation-fade-in);
+	}
+
+	a:hover {
+		border-color: var(--brand);
 	}
 
 	iconify-icon {
