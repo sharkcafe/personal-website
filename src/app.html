@@ -3,24 +3,15 @@
 	<head>
 		<title>Lulu</title>
 		<meta charset="utf-8" />
-		<link rel="icon" href="https://fav.farm/🌻" />
+		<link rel="icon" href="https://fav.farm/🐝" />
 		<link rel="alternate" type="application/atom+xml" href="/rss.xml" />
 		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-		<script type="module">
-			const theme = localStorage.getItem('color-scheme');
-
-			theme
-				? document.documentElement.setAttribute('color-scheme', theme)
-				: localStorage.setItem('color-scheme', 'dark');
-		</script>
 
 		<!-- Primary Meta Tags -->
-		<title>Lulu (pluwshy)</title>
 		<meta name="title" content="Lulu (pluwshy)" />
 		<meta name="description" content="My personal website!" />
 
-		<!-- Open Graph / Facebook -->
+		<!-- Open Graph -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://pluwshy.gay/" />
 		<meta property="og:title" content="Lulu (pluwshy)" />
@@ -29,10 +20,18 @@
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:url" content="https://pluwshy.gay/" />
 		<meta name="twitter:title" content="Lulu (pluwshy)" />
 		<meta name="twitter:description" content="My personal website!" />
 		<meta name="twitter:image" content="https://pluwshy.gay/thumb.jpg" />
+
+		%sveltekit.head%
+		<script type="module">
+			const theme = localStorage.getItem('color-scheme');
+
+			theme
+				? document.documentElement.setAttribute('color-scheme', theme)
+				: localStorage.setItem('color-scheme', 'dark');
+		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>

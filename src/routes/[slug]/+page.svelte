@@ -9,6 +9,7 @@
 	<title>{data.meta.title} - {config.name}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
+	<meta name="title" content={data.meta.title} />
 </svelte:head>
 
 <article>
