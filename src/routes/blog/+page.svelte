@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>blog - {config.title}</title>
+	<title>blog - {config.name}</title>
 </svelte:head>
 
 <Comment title="blog" />
