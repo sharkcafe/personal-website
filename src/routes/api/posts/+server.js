@@ -3,10 +3,12 @@ import { json } from '@sveltejs/kit';
 async function getPosts() {
 	let posts = [];
 
+	// const paths = import.meta.glob(['/src/blog/*.md', '/src/blog/*/*.md'], { eager: true });
 	const paths = import.meta.glob(['/src/blogs/*.md', '/src/blogs/*/*.md'], { eager: true });
 
 	for (const path in paths) {
 		const file = paths[path];
+		// const slug = path.substring(path.indexOf('/') + 4)?.replace('.md', '');
 		const slug = path.split('/').at(-1)?.replace('.md', '');
 		// @ts-ignore
 		const metadata = file.metadata;

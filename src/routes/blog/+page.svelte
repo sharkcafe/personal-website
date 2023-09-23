@@ -63,5 +63,6 @@
 
 	.description {
 		color: var(--text-1);
+		max-inline-size: none;
 	}
 </style>

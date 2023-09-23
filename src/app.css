@@ -113,6 +113,10 @@ li {
 	padding-inline-start: 0;
 }
 
+a {
+	text-decoration-color: var(--brand);
+}
+
 .surface-1 {
 	background-color: var(--surface-1);
 	color: var(--text-2);
