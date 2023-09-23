@@ -9,7 +9,11 @@
 	<title>{data.meta.title} - {config.name}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
+	<meta property="og:description" content={data.meta.description} />
 	<meta name="title" content={data.meta.title} />
+
+	<meta name="twitter:title" content={data.meta.title} />
+	<meta name="twitter:description" content={data.meta.description} />
 </svelte:head>
 
 <article>

@@ -9,7 +9,12 @@ categories:
 published: true
 ---
 
-<svelte:head><meta property="og:image" content="https://pluwshy.gay/chess.jpg" /></svelte:head>
+<svelte:head>
+
+    <meta property="og:image" content="https://pluwshy.gay/chess.jpg" />
+    <meta name="twitter:image" content="https://pluwshy.gay/chess.jpg" />
+
+</svelte:head>
 
 Heya! In the last few days, fraille and I have been working on a Minecraft chess board with custom 3D models as chess pieces. ♟️
 
@@ -29,7 +34,7 @@ We hope to see you in Matsuka!
     a {
         color: var(--brand);
     }
-    
+
     button {
         background-color: var(--surface-3);
         margin: var(--size-3) 0;
