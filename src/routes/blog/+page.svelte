@@ -18,9 +18,9 @@
 				<li class="post">
 					<div class="info">
 						<p class="title">{post.title}</p>
-						<p class="description">{post.description}</p>
+						<p class="date">{formatDate(post.date)}</p>
 					</div>
-					<p class="date">{formatDate(post.date)}</p>
+					<p class="description">{post.description}</p>
 				</li></a>
 		{/each}
 	</ul>
@@ -37,8 +37,6 @@
 	}
 
 	.post {
-		display: flex;
-		justify-content: space-between;
 		background-color: var(--surface-2);
 		padding: var(--size-3);
 		border-radius: var(--size-3);
@@ -46,6 +44,11 @@
 		max-inline-size: none;
 		transition: 0.2s all;
 		animation: var(--animation-fade-in);
+	}
+
+	.info {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.post:hover {
