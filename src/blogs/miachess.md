@@ -22,7 +22,7 @@ As we wanted to add this to our little village on [Mine in Abyss](https://minein
 
 People who visit us here at Matsuka in Layer 4 can now play the game by downloading the texture pack:
 
-[<button>Download Texture Pack</button>](https://www.pluwshy.gay/mia-chess.zip)
+<a href="https://www.pluwshy.gay/mia-chess.zip"><button>Download Texture Pack</button></a>
 
 ![Screenshot of 3D pieces in-game](/chess.jpg)
 
@@ -41,7 +41,7 @@ We hope to see you in Matsuka!
 
     button {
         background-color: var(--surface-3);
-        margin-bottom: var(--size-3);
+        margin: var(--size-3) 0;
         border: none;
     }
 </style>
