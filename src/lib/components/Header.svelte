@@ -6,6 +6,7 @@
 <nav>
 	<a href="/" class="dog">
 		<div id="dog" />
+		<div id="dog-cache" />
 	</a>
 
 	<ul class="links">
@@ -65,6 +66,11 @@
 	}
 
 	#dog:hover {
+		background-image: url(/dog_hover.gif);
+	}
+
+	#dog-cache {
+		/* display: none; */
 		background-image: url(/dog_hover.gif);
 	}
 </style>

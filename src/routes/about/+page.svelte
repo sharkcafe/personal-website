@@ -14,22 +14,24 @@
 		<Comment title="about" />
 		<p>
 			I enjoy creating something that can live on the Internet, it is what drives me to try out new
-			things. I am specialized in building and designing web components and I am always ready to
-			learn something new!
+			things. 🚀 I am specialized in building and designing web components and I am always ready to
+			learn something new! 🎓
 		</p>
 		<p>
 			I occasionally do content creation in my free time as I started developing interest in video
-			and photo editing over the years.
+			and photo editing over the years. 📹 🖼️
 		</p>
 	</div>
 
 	<div class="skills">
 		<Comment title="skills" />
-		<Skills />
+		<div class="skills-container">
+			<Skills />
+		</div>
 	</div>
 
 	<div class="projects">
-		<Comment title="Projects" />
+		<Comment title="projects" />
 		<Projects />
 	</div>
 </section>
@@ -53,6 +55,7 @@
 		width: fit-content;
 		max-inline-size: none;
 		margin-bottom: var(--size-2);
+		text-align: justify;
 	}
 
 	.about {
@@ -75,6 +78,11 @@
 				'about'
 				'skills'
 				'projects';
+		}
+
+		.skills-container {
+			display: grid;
+			place-items: center;
 		}
 	}
 </style>

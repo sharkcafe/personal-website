@@ -1,32 +1,44 @@
 <script>
-    import 'iconify-icon';
+	import 'iconify-icon';
 
-    export let icon = '';
-    export let title = '';
+	export let href = '';
+	export let icon = '';
+	export let title = '';
 
-    let size = 48;
+	let size = 48;
 </script>
 
-<div>
-    <iconify-icon {icon} width={size} />
-    <span>{title}</span>
-</div>
+<a {href} target="_blank" rel="noopener noreferrer">
+	<iconify-icon {icon} width={size} />
+	<span>{title}</span>
+</a>
 
 <style>
-    div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: var(--size-1);
-        background-color: var(--surface-2);
-        width: 7.5rem;
-        height: 7.5rem;
-        border-radius: var(--radius-3);
-        border: var(--border-size-2) solid var(--surface-4);
-    }
+	a {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: var(--size-2);
+		background-color: var(--surface-2);
+		width: 7.5rem;
+		height: 7.5rem;
+		border-radius: var(--radius-3);
+		border: var(--border-size-2) solid var(--surface-4);
+		text-decoration: none;
+		transition: 0.2s all;
+		animation: var(--animation-fade-in);
+	}
 
-    iconify-icon {
-        color: var(--brand);
-    }
+	a:hover {
+		border-color: var(--brand);
+	}
+
+	span {
+		color: var(--text-1);
+	}
+
+	iconify-icon {
+		color: var(--brand);
+	}
 </style>

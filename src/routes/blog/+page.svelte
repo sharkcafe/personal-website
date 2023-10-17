@@ -58,6 +58,7 @@
 	.title {
 		font-size: var(--font-size-fluid-1);
 		color: var(--brand);
+		font-weight: bold;
 	}
 
 	.date {
