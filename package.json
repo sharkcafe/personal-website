@@ -1,39 +1,39 @@
 {
-  "name": "website-bun",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
-    "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "format": "prettier --plugin-search-dir . --write ."
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-vercel": "^3.0.3",
-    "@sveltejs/kit": "^1.20.4",
-    "eslint": "^8.28.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-svelte": "^2.30.0",
-    "mdsvex": "^0.11.0",
-    "prettier": "^2.8.0",
-    "prettier-plugin-svelte": "^2.10.1",
-    "svelte": "^4.0.5",
-    "svelte-check": "^3.4.3",
-    "typescript": "^5.0.0",
-    "vite": "^4.4.2"
-  },
-  "type": "module",
-  "dependencies": {
-    "@fontsource/ibm-plex-mono": "^5.0.8",
-    "@fontsource/inter": "^5.0.8",
-    "iconify-icon": "^1.0.8",
-    "open-props": "^1.5.15",
-    "rehype-slug": "^6.0.0",
-    "remark-toc": "^8.0.1",
-    "remark-unwrap-images": "^3.0.1",
-    "shiki": "^0.14.4"
-  }
+	"name": "website-bun",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-vercel": "^3.0.3",
+		"@sveltejs/kit": "^1.20.4",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte": "^2.30.0",
+		"mdsvex": "^0.11.0",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.10.1",
+		"svelte": "^4.0.5",
+		"svelte-check": "^3.4.3",
+		"typescript": "^5.0.0",
+		"vite": "^4.4.2"
+	},
+	"type": "module",
+	"dependencies": {
+		"@fontsource/ibm-plex-mono": "^5.0.8",
+		"@fontsource/inter": "^5.0.8",
+		"iconify-icon": "^1.0.8",
+		"open-props": "^1.5.15",
+		"rehype-slug": "^6.0.0",
+		"remark-toc": "^8.0.1",
+		"remark-unwrap-images": "^3.0.1",
+		"shiki": "^0.14.4"
+	}
 }
