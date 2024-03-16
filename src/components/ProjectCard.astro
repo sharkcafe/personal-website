@@ -1,5 +1,5 @@
 ---
-const { name, description, language, owner, stars_count, stargazers_count, html_url } = Astro.props;
+const { name, description, owner, html_url } = Astro.props;
 const avatarUrl = new URL(owner.avatar_url);
 avatarUrl.searchParams.set("size", "32");
 ---

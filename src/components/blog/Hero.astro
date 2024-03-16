@@ -62,9 +62,10 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 					<a
 						aria-label={`View more blogs with the tag ${tag}`}
 						class="link inline-block before:content-['#']"
-						data-pagefind-filter="tag"
-						href={`/tags/${tag}/`}>{tag}
-					</a>{i < data.tags.length - 1 && ", "}
+						href={`/tags/${tag}/`}>
+						{tag}
+					</a>
+					{i < data.tags.length - 1 && ", "}
 				</>
 			))}
 		</div>
