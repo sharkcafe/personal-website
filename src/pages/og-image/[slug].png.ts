@@ -35,10 +35,8 @@ const markup = (title: string, pubDate: string) =>
 			<h1 tw="text-6xl font-bold leading-snug text-white">${title}</h1>
 		</div>
 		<div tw="flex items-center justify-between w-full p-10 border-t border-[#85a48c] text-xl">
-			<div tw="flex gap-x-4 items-center">
-				<p tw="ml-3 font-semibold">${siteConfig.title}</p>
-				<p>by ${siteConfig.author}</p>
-			</div>
+			<p tw="ml-3 font-semibold">${siteConfig.title}</p>
+			<p>by ${siteConfig.author}</p>
 		</div>
 	</div>`;
 
