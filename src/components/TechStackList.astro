@@ -1,0 +1,60 @@
+---
+import { Icon } from "astro-icon/components";
+
+const techStack = {
+	Frontend: [
+		{
+			name: "TypeScript",
+			href: "https://www.typescriptlang.org/",
+			icon: "devicon-plain:typescript",
+		},
+		{
+			name: "SCSS",
+			href: "https://sass-lang.com/",
+			icon: "la:sass",
+		},
+		{
+			name: "Svelte",
+			href: "https://svelte.dev/",
+			icon: "devicon-plain:svelte",
+		},
+		{
+			name: "Astro",
+			href: "https://astro.build/",
+			icon: "devicon-plain:astro",
+		},
+	],
+	Design: [
+		{
+			name: "Figma",
+			href: "https://figma.com/",
+			icon: "devicon-plain:figma",
+		},
+	],
+};
+---
+
+<div class="flex flex-wrap gap-x-16 gap-y-4 md:flex-row">
+	{
+		Object.entries(techStack).map(([name, items]) => (
+			<div class="mb-4">
+				<h2 class="title mb-4 text-lg">{name}</h2>
+				<ul>
+					{items.map(({ name, href, icon }) => (
+						<li class="mb-4 flex items-center gap-x-4">
+							<Icon
+								aria-hidden="true"
+								class="h-6 w-6 text-gray-600 dark:text-gray-400"
+								focusable="false"
+								name={icon}
+							/>
+							<a class="link" href={href} rel="noopener noreferrer" target="_blank">
+								{name}
+							</a>
+						</li>
+					))}
+				</ul>
+			</div>
+		))
+	}
+</div>

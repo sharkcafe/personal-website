@@ -1,0 +1,41 @@
+---
+import { sourceCode } from "@/site-config";
+import ProjectCard from "./ProjectCard.astro";
+
+const repos = ["https://api.github.com/repos/pluwshy/personal-website"];
+
+export function getEnv(locals: App.Locals, metaEnv: ImportMetaEnv, name: string) {
+	const env = import.meta.env.PROD ? locals.runtime.env : metaEnv;
+
+	if (!env[name]) throw new Error(`Missing environment variable "${name}"`);
+
+	return env[name];
+}
+
+const repoData = await Promise.all(
+	repos.map(async (repo) => {
+		const requestInit = {
+			headers: new Headers({
+				"User-Agent": sourceCode,
+			}),
+		} satisfies RequestInit;
+
+		return fetch(repo, requestInit)
+			.then(async (r) => {
+				if (!r.ok) {
+					const e = await r.text().catch(() => "Unknown Error");
+					throw new Error(
+						`Failed to fetch repo info for ${repo}: ${r.status} ${r.statusText}\n${e}`
+					);
+				}
+				return r.json();
+			})
+			.catch((e) => {
+				console.error(e);
+				return null;
+			});
+	})
+);
+---
+
+{repoData.map((data) => (data ? <ProjectCard {...data} /> : null))}

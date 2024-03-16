@@ -1,0 +1,12 @@
+---
+const { name, description, language, owner, stars_count, stargazers_count, html_url } = Astro.props;
+const avatarUrl = new URL(owner.avatar_url);
+avatarUrl.searchParams.set("size", "32");
+---
+
+<div class="mb-4 flex flex-col gap-x-2 md:flex-row">
+	<div>
+		<a class="link flex-none" href={html_url} rel="noopener noreferrer" target="_blank">{name}</a>:
+	</div>
+	<span>{description}</span>
+</div>

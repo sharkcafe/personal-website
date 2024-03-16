@@ -1,0 +1,32 @@
+---
+import { menuLinks, siteConfig, sourceCode } from "@/site-config";
+
+const year = new Date().getFullYear();
+---
+
+<footer
+	class="mt-auto flex w-full flex-col items-center justify-center gap-y-2 pb-4 pt-20 text-center align-top text-xs font-semibold text-gray-600 dark:text-gray-400 sm:flex-row sm:justify-between">
+	<div class="me-0 sm:me-4">
+		&copy;
+		{year}. Made with ❤ by {siteConfig.author} | <a
+			class="link"
+			href={sourceCode}
+			rel="noopener noreferrer"
+			target="_blank">source code</a
+		>
+	</div>
+	<nav
+		aria-label="More on this site"
+		class="flex gap-x-2 sm:gap-x-0 sm:divide-x sm:divide-gray-500">
+		{
+			menuLinks.map((link) => (
+				<a
+					class="px-4 py-2 sm:hover:link sm:py-0 sm:hover:text-textColor"
+					href={link.path}
+					target={link.blank == true ? "_blank" : ""}>
+					{link.title}
+				</a>
+			))
+		}
+	</nav>
+</footer>

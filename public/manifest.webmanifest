@@ -1,0 +1,21 @@
+{
+	"name": "Lulu's page",
+	"short_name": "Lulu's Page",
+	"description": "Lulu's personal page",
+	"icons": [
+		{
+			"src": "/192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"start_url": "/",
+	"background_color": "#0D0D0D",
+	"theme_color": "#74B483",
+	"display": "standalone"
+}

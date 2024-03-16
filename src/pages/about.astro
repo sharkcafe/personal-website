@@ -1,0 +1,33 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import TechStackList from "@/components/TechStackList.astro";
+import ProjectList from "@/components/ProjectList.astro";
+
+const meta = {
+	description: "Learn more about me!",
+	title: "About",
+};
+---
+
+<PageLayout meta={meta}>
+	<section>
+		<h1 class="title mb-4">About</h1>
+		<p class="mb-6">
+			I enjoy creating something that can live on the Internet, it is what drives me to try out new
+			things. 🚀 I am specialized in building and designing web components and I am always ready to
+			learn something new! 🎓
+		</p>
+		<p>
+			I occasionally do content creation in my free time as I started developing interest in video
+			and photo editing over the years. 📹 🖼️
+		</p>
+	</section>
+	<section aria-label="Tech stack links" class="mt-16">
+		<h1 class="title mb-4">Tech Stack</h1>
+		<TechStackList />
+	</section>
+	<section aria-label="Tech stack links" class="mt-8">
+		<h1 class="title mb-4">Projects</h1>
+		<ProjectList />
+	</section>
+</PageLayout>

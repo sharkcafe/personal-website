@@ -1,0 +1,93 @@
+---
+import type { GetStaticPaths, Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+
+import Pagination from "@/components/Paginator.astro";
+import PostPreview from "@/components/blog/PostPreview.astro";
+import PageLayout from "@/layouts/Base.astro";
+import { getAllPosts, getUniqueTags, sortMDByDate } from "@/utils";
+
+import { Icon } from "astro-icon/components";
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const allPosts = await getAllPosts();
+	const allPostsByDate = sortMDByDate(allPosts);
+	const uniqueTags = getUniqueTags(allPosts);
+	return paginate(allPostsByDate, { pageSize: 10, props: { uniqueTags } });
+}) satisfies GetStaticPaths;
+
+interface Props {
+	page: Page<CollectionEntry<"post">>;
+	uniqueTags: string[];
+}
+
+const { page, uniqueTags } = Astro.props;
+
+const meta = {
+	description: "My personal blog about all kinds of things!",
+	title: "Blog",
+};
+
+const paginationProps = {
+	...(page.url.prev && {
+		prevUrl: {
+			text: `← Previous Posts`,
+			url: page.url.prev,
+		},
+	}),
+	...(page.url.next && {
+		nextUrl: {
+			text: `Next Posts →`,
+			url: page.url.next,
+		},
+	}),
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="mb-6 flex items-end gap-4">
+		<h1 class="title">Blog Posts</h1>
+		<a class="link" href="/rss.xml" target="_blank">rss</a>
+	</div>
+	<div class="grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8">
+		<section aria-label="Blog post list">
+			<ul class="space-y-8 text-start">
+				{
+					page.data.map((p) => (
+						<li class="flex flex-col flex-wrap gap-2 sm:flex-row [&_q]:basis-full">
+							<PostPreview as="h2" post={p} withDesc />
+						</li>
+					))
+				}
+			</ul>
+			<Pagination {...paginationProps} />
+		</section>
+		{
+			!!uniqueTags.length && (
+				<aside>
+					<h2 class="mb-4 flex items-center gap-x-2 text-lg font-semibold">
+						<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name="la:tags" />
+						Tags
+					</h2>
+					<ul class="flex flex-wrap gap-2 text-bgColor">
+						{uniqueTags.map((tag) => (
+							<li>
+								<a
+									aria-label={`View all posts with the tag: ${tag}`}
+									class="flex items-center justify-center rounded-lg bg-accent px-2 py-1"
+									href={`/tags/${tag}/`}>
+									{tag}
+								</a>
+							</li>
+						))}
+					</ul>
+					<span class="mt-4 block sm:text-end">
+						<a aria-label="View all blog categories" class="sm:hover:text-accent" href="/tags/">
+							View all →
+						</a>
+					</span>
+				</aside>
+			)
+		}
+	</div>
+</PageLayout>

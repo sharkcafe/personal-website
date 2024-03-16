@@ -1,0 +1,62 @@
+---
+import { Icon } from "astro-icon/components";
+
+/** 
+	Uses https://www.astroicon.dev/getting-started/
+	Find icons via guide: https://www.astroicon.dev/guides/customization/#open-source-icon-sets
+*/
+
+const socialLinks: {
+	name: string;
+	username: string;
+	href: string;
+	icon: string;
+}[] = [
+	{
+		name: "Github",
+		username: "pluwshy",
+		href: "https://github.com/pluwshy",
+		icon: "ri:github-line",
+	},
+	{
+		name: "Bluesky",
+		username: "@shark.cafe",
+		href: "https://bsky.app/profile/shark.cafe",
+		icon: "ri:bluesky-line",
+	},
+	{
+		name: "Telegram",
+		username: "@pluwshyy",
+		href: "https://t.me/pluwshyy",
+		icon: "la:telegram",
+	},
+	{
+		name: "Twitter",
+		username: "@pluwshyy",
+		href: "https://twitter.com/pluwshyy",
+		icon: "ri:twitter-line",
+	},
+	{
+		name: "email",
+		username: "lulu@shark.cafe",
+		href: "mailto:lulu@shark.cafe",
+		icon: "ri:mail-line",
+	},
+];
+---
+
+<ul class="space-y-4">
+	{
+		socialLinks.map(({ name, username, href, icon }) => (
+			<div class="flex flex-1 gap-x-2">
+				<li class="flex min-w-36 gap-x-4 text-gray-600 dark:text-gray-400">
+					<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name={icon} />
+					<span>{name}</span>
+				</li>
+				<a class="link" href={href} rel="noopener noreferrer" target="_blank">
+					{username}
+				</a>
+			</div>
+		))
+	}
+</ul>

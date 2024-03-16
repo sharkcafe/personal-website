@@ -1,0 +1,18 @@
+---
+import errorImg from "/public/error.gif";
+import PageLayout from "@/layouts/Base.astro";
+import { Image } from "astro:assets";
+
+const meta = {
+	description: "Oops! It looks like this page is lost in space!",
+	title: "Oops! You found a missing page!",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-6">404 | The page was not found</h1>
+	<p class="mb-8">Please use the navigation to find your way back</p>
+	<div>
+		<Image alt="A shark being pet by a scuba diver" loading="eager" src={errorImg} />
+	</div>
+</PageLayout>
