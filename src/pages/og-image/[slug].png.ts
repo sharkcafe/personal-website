@@ -7,8 +7,6 @@ import { getAllPosts, getFormattedDate } from "@/utils";
 
 import IBMPlexMono from "@/assets/ibmplexmono-regular.ttf";
 import IBMPlexMonoBold from "@/assets/ibmplexmono-700.ttf";
-import { Image } from "astro:assets";
-import sharkImg from "/public/shark.png";
 
 const ogOptions: SatoriOptions = {
 	width: 1200,
@@ -38,16 +36,9 @@ const markup = (title: string, pubDate: string) =>
 		</div>
 		<div tw="flex items-center justify-between w-full p-10 border-t border-[#85a48c] text-xl">
 			<div tw="flex gap-x-4 items-center">
-				<Image
-					class="rendering-pixelated h-20 w-20"
-					alt="logo"
-					fetchpriority="high"
-					loading="eager"
-					src="{sharkImg}"
-				/>
 				<p tw="ml-3 font-semibold">${siteConfig.title}</p>
+				<p>by ${siteConfig.author}</p>
 			</div>
-			<p>by ${siteConfig.author}</p>
 		</div>
 	</div>`;
 

@@ -2,7 +2,7 @@
 title: "MIA Chess"
 description: "A Minecraft Chess Board with 3D models, made for Matsuka Village on Mine in Abyss"
 publishDate: "2023-09-23"
-tags: ["mineinabyss", "minecraft", "chess"]
+tags: ["mineinabyss", "minecraft"]
 coverImage:
   src: "./chess.jpg"
   alt: "Screenshot of 3D pieces in-game"

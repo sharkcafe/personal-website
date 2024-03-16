@@ -5,7 +5,7 @@ publishDate: "2023-09-13"
 coverImage:
   src: "./oh-my-gaah.gif"
   alt: "Screenshot of 3D pieces in-game"
-tags: ["ohmygaah"]
+tags: ["welcome"]
 ---
 
 Hello, everynyan! How are you? Fine, thank you 😺
