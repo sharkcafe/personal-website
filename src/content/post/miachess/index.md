@@ -7,7 +7,7 @@ coverImage:
   src: "./chess.jpg"
   alt: "Screenshot of 3D pieces in-game"
 draft: false
-ogImage: "chess.jpg"
+ogImage: "./chess.jpg"
 ---
 
 Heya! In the last few days, fraille and I have been working on a Minecraft chess board with custom 3D models as chess pieces. ♟️

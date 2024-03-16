@@ -67,6 +67,7 @@ export async function getStaticPaths() {
 			params: { slug: post.slug },
 			props: {
 				title: post.data.title,
+				desc: post.data.description,
 				pubDate: post.data.updatedDate ?? post.data.publishDate,
 			},
 		}));
