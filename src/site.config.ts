@@ -44,7 +44,7 @@ export const menuLinks: Array<{ title: string; path: string; blank?: boolean }> 
 	},
 ];
 
-export const sourceCode = "https://github.com/pluwshy/personal-website";
+export const sourceCode = "https://github.com/sharkcafe/personal-website";
 
 // https://expressive-code.com/reference/configuration/
 export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
