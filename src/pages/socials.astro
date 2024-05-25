@@ -1,0 +1,16 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import SocialList from "@/components/SocialList.astro";
+
+const meta = {
+	description: "Here are my social media links!",
+	title: "Socials",
+};
+---
+
+<PageLayout meta={meta}>
+	<section aria-label="Social media links">
+		<h2 class="title mb-4 text-xl">Socials</h2>
+		<SocialList />
+	</section>
+</PageLayout>
